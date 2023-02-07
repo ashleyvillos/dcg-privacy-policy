@@ -10,17 +10,34 @@
     <style>
       * {
         font-family: Arial, Helvetica, sans-serif;
+        color: #e8e8e3;
       }
       body {
         padding: 2em 10em;
       }
       table, th, td {
-        border: 1px solid black;
+        border: 1px solid white;
         border-collapse: collapse;
+      }
+      html {
+        background-color: #1D2237;
       }
       .table {
         table-layout: fixed;
         width: 100%;
+      }
+      .tag {
+        color: #499cd6;
+        
+      }
+      .property {
+        color: #8ccdda;
+      }
+      .prop-value {
+        color: #ce9178;
+      }
+      .tag-indicator {
+        color: #808067;
       }
     </style>
   </head>
@@ -57,10 +74,15 @@
     <hr />
       <p> The list of permissions required by the app are available in my private repository dvo.commuters.guide in its AndroidManifest.xml file. </p>
 
-    <div style="background-color: F6F8FA; padding: 10px;">
+    <div style="background-color: #1e1e1c; padding: 5px 10px;">
       <pre style="display: flex; flex-direction: column;">
-        <span> &lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/&gt; </span>
-        <span> &lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/&gt; </span>
+        <div>  
+          <span class="tag-indicator">&lt;</span><span class="tag">uses-permission</span> <span class="property">android:name</span>=<span class="prop-value">"android.permission.ACCESS_FINE_LOCATION"</span><span class="tag-indicator">/&gt;</span>
+        </div>
+        <div>
+          <span class="tag-indicator">&lt;</span><span class="tag">uses-permission</span> <span class="property">android:name</span>=<span class="prop-value">"android.permission.ACCESS_COARSE_LOCATION"</span><span class="tag-indicator">/&gt;</span>
+        </div>
+        <!-- <span> &lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/&gt; </span> -->
       </pre>
     </div>
 
